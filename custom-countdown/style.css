@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: "Nunito", sans-serif;
 }
 
 /* Video Background */
@@ -18,7 +18,8 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-
+  width: 100vw;
+  height: auto;
 }
 
 video {
@@ -32,7 +33,9 @@ video {
   position: fixed;
   left: 0;
   top: 0;
-
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* Container */
@@ -46,7 +49,7 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
-
+background: rgba(255, 255, 255, 0.85);
 }
 
 .input-container {
@@ -79,7 +82,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: "Nunito", sans-serif;
 }
 
 /* Button */
@@ -95,12 +98,16 @@ button {
   cursor: pointer;
   outline: none;
 }
+button:hover {
+  filter: brightness(110%);
+}
 
 
 
 /* Countdown */
 ul {
   margin-left: -45px;
+  display: flex;
 }
 
 li {
@@ -123,20 +130,46 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 3s infinite;
+}
 
-/* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 600px) {
-  .video-background {
-
+@keyframes complete {
+  0% {
+    color: rgb(255, 3, 3);
   }
-  
+  25% {
+    color: rgb(251, 255, 3);
+  }
+  50% {
+    color: rgb(53, 255, 3);
+  }
+  75% {
+    color: rgb(3, 133, 255);
+  }
+  100% {
+    color: rgb(184, 3, 255);
+    transform: scale(1.5);
+  }
+}
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 1300px) {
+  .video-background {
+      height: 100vh;
+    }
   video {
-
+    object-fit: cover;
+    object-position: 70%;
+  }
+}
+@media screen and (max-width: 720px) {
+  video {
     margin-top: -1px;
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
@@ -161,6 +194,7 @@ li span {
 
   h1 {
     font-size: 20px;
+  
   }
 
   li {
@@ -170,4 +204,7 @@ li span {
   li span {
     font-size: 40px;
   }
+}
+.hidden {
+  display: none;
 }
