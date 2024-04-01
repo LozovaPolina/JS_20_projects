@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Bookmark App</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script  defer src="script.js"></script>
 </head>
+
 <body>
+    <h1 class="btn-bookmark">Add Bookmark</h1>
+
+    <div class="container">
+        <div class="item">
+            <i class="fas fa-times" data-close="" title="close"></i>
+            <div class="name">
+                <img src="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design" alt="favicon">
+                <a href="https://jacinto.design" target="_blank">Jacito Design</a>
+            </div>
+        </div>
+        <!-- <div class="item">
+            <i class="fas fa-times" data-close="" title="close"></i>
+            <div class="name">
+                <img src="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design" alt="favicon">
+                <a href="https://jacinto.design" target="_blank">Jacito Design</a>
+            </div>
+        </div> -->
+        <!-- <div class="item">
+            <i class="fas fa-times" data-close="" title="close"></i>
+            <div class="name">
+                <img src="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design" alt="favicon">
+                <a href="https://jacinto.design" target="_blank">Jacito Design</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="fas fa-times" data-close="" title="close"></i>
+            <div class="name">
+                <img src="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design" alt="favicon">
+                <a href="https://jacinto.design" target="_blank">Jacito Design</a>
+            </div>
+        </div> -->
+    </div>
+    <!-- Modal -->
+    <div class="modal-container">
+        <div class="modal">
+            <i class="fas fa-times close-icon" data-close=""></i>
+            <div class="modal-header">
+                <h3>Add Bookmark</h3>
+            </div>
+            <div class="modal-content">
+                <form action="" class="bookmark-form">
+                    <div class="form-group">
+                        <label for="websiteName" class="form-label">Website Name</label>
+                        <input type="text" class="form-input" id="websiteName" placeholder="Google">
+                    </div>
+                    <div class="form-group">
+                        <label for="websiteUrl" class="form-label">Website URL</label>
+                        <input type="text" class="form-input" id="websiteUrl" placeholder="google.com">
+                        <h3 class="hidden massage-validation">Please provide a valid web address</h3>
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
     <!-- Script -->
-    <script src="script.js"></script>
+    
 </body>
+
 </html>
